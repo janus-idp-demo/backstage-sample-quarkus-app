@@ -22,7 +22,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: "group:default/api-group1"
+  owner: "group:default/api-group-1"
   providesApis:
     - "joes-quarkus-app"
 ---
@@ -33,6 +33,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: "group:default/api-group1"
+  owner: "group:default/api-group-1"
   definition:
     $text: ./openapi.yaml
