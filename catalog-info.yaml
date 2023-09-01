@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "my-quarkus-app"
+  name: "joes-quarkus-app"
   annotations:
-    argocd/app-name: my-quarkus-app-dev
-    backstage.io/kubernetes-id: my-quarkus-app
-    backstage.io/kubernetes-namespace: my-quarkus-app-dev
+    argocd/app-name: joes-quarkus-app-dev
+    backstage.io/kubernetes-id: joes-quarkus-app
+    backstage.io/kubernetes-namespace: joes-quarkus-app-dev
     janus-idp.io/tekton-enabled : 'true'
     github.com/project-slug: janus-idp-demo/backstage-sample-quarkus-app
     backstage.io/techdocs-ref: dir:.
@@ -22,17 +22,17 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: "user:default/jayfray12"
+  owner: "user:default/joe"
   providesApis:
-    - "my-quarkus-app"
+    - "joes-quarkus-app"
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: "my-quarkus-app"
+  name: "joes-quarkus-app"
 spec:
   type: openapi
   lifecycle: production
-  owner: "user:default/jayfray12"
+  owner: "user:default/joe"
   definition:
     $text: ./openapi.yaml
